@@ -1,22 +1,38 @@
+/* General Layout */
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 header {
   padding: 1em;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 main {
   flex: 1;
-  padding: 1em;
+  padding: 2em;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 footer {
   padding: 1em;
   text-align: center;
+  background: #007bff;
+  color: white;
+  font-size: 0.9em;
 }
 
+/* Cat Card */
 .cat-card {
   border: 1px solid #ddd;
   text-align: center;
@@ -24,15 +40,29 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cat-info {
   background: #f8f9fa;
-  border-radius: 4px;
+  border-radius: 0 0 8px 8px;
+  padding: 10px;
 }
 
-/*availablecats*/
+.cat-info h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
 
+/* Available Cats Filters */
 .filters {
   display: flex;
   justify-content: center;
@@ -53,35 +83,38 @@ footer {
   padding: 8px 12px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1em;
 }
 
 .filter-dropdown select:focus,
 .filter-search input:focus {
   border-color: #007bff;
   outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 .filter-search input {
   font-size: 16px;
 }
 
-/*Contact*/
-/* General styling for the contact form container */
+/* Contact Us Page */
 .contact-us {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 30px;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .contact-us h2 {
   text-align: center;
-  color: #333;
+  color: #007bff;
   margin-bottom: 15px;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 .contact-us p {
@@ -97,11 +130,10 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Styling for the form elements */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .form-group {
@@ -117,10 +149,11 @@ footer {
 
 .form-group input,
 .form-group textarea {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
@@ -130,24 +163,32 @@ footer {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Styling for the submit button */
 .btn-submit {
   background-color: #007bff;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 18px;
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-submit:hover {
   background-color: #0056b3;
+  transform: scale(1.02);
 }
 
 .btn-submit:active {
   background-color: #003f7f;
 }
 
+/* Footer */
+footer {
+  background: #007bff;
+  color: white;
+  padding: 20px;
+  font-size: 0.9em;
+  text-align: center;
+}
